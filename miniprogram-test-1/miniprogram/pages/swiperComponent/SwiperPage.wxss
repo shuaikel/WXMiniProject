@@ -1,0 +1,168 @@
+/* miniprogram/pages/swiperComponent/SwiperPage.wxss */
+
+
+.scroll_box{
+  width: 100%;
+  height: 90rpx;
+  overflow: hidden;
+  background: #fff;
+  white-space: nowrap;
+}
+
+
+.item_list{
+  width: 222rpx;
+  height: 90rpx;
+  display: inline-block;
+  /* padding:0 1rpx; */
+  background-color: #3b3c3c;
+  flex-direction: row;
+  /* justify-content: flex-end; */
+  padding: 20rpx 0;
+}
+
+.item_container{
+  height: 90rpx;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: row;
+}
+
+.itemSelect_label{
+  font-size: 28rpx;
+	font-weight: 400;
+	/* font-stretch: normal; */
+	line-height: 50rpx;
+	letter-spacing: 0rpx;
+	color: #ffffff;
+  display: flex;
+  flex: 1;
+  border-right: 1rpx solid;
+  border-right-color: #666;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.top_caverView{
+  width: 1rpx;
+  height: 50rpx;
+  	background-image: linear-gradient(
+		#666666, 
+		#666666), 
+	linear-gradient(
+		#666666, 
+		#666666);
+	background-blend-mode: normal, 
+		normal;
+    display: flex;
+}
+
+.noBorderRightStyle{
+    border-right: 0rpx;
+}
+
+.borderRightStyle{
+  border-right: 1rpx solid;
+  border-right-color: #666;
+}
+
+
+.bottomScroll_box{
+  width: 100%;
+  height: calc(100vh - 90rpx);  /* 减去顶部导航条的高度*/
+  overflow: hidden;
+  background: #fafafa;
+  white-space: nowrap;
+}
+
+.bottom_item_list{
+  width: 100vw;
+  -webkit-overflow-scrolling: touch;
+   height: 100%;
+  display: inline-block;
+  overflow-y: scroll;
+
+}
+
+.itemSelect_view{
+  height: 230rpx;
+  display: flex;
+  flex: 1;
+  margin-top: 35rpx;
+  margin-left: 30rpx;
+  margin-right: 30rpx;
+  background-color: #ffffff;
+	box-shadow: 0rpx 6rpx 21rpx 0rpx 
+		rgba(0, 0, 0, 0.07);
+	border-radius: 15rpx;
+
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  background-position: center right;
+
+  flex-direction: column;
+
+}
+
+.tabSelectColor{
+  color: #fff;
+}
+
+.tabDefaultColor{
+  color: #666666;
+}
+
+.markLabel{
+  background-color: #eed57f;
+	border-radius: 15rpx 0px 15rpx 0rpx;
+  	font-size: 21rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	line-height: 40rpx;
+	letter-spacing: 0rpx;
+	color: #ffffff;
+  width: 120rpx;
+  text-align: center;
+}
+
+.giftTitleLabel{
+  	font-size: 36rpx;
+	font-weight: bold;
+	font-stretch: normal;
+	letter-spacing: 0rpx;
+	color: #333333;
+  margin-top: 35rpx;
+  margin-left: 55rpx;
+}
+
+.giftSubTitlelabel{
+  	font-size: 28rpx;
+	font-weight: 400;
+	font-stretch: normal;
+	letter-spacing: 0rpx;
+	color: #999999;
+   margin-top: 10rpx;
+  margin-left: 55rpx;
+}
+
+.emptyComponent{
+  margin-top: 0rpx;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 380rpx);
+  width: 100%;
+  /* background-color: red; */
+}
+
+.emptyText{
+  font-size: 28rpx;
+	font-weight: normal;
+	font-stretch: normal;
+	line-height: 16rpx;
+	letter-spacing: 0rpx;
+	color: #999999;
+  margin-top: 50rpx;
+}

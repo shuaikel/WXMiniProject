@@ -1,0 +1,23 @@
+<!--index.wxml-->
+<include src="/components/page_template/index.wxml" />
+
+<view class="container">
+
+    <label>123xs</label>
+
+    <view class="content">
+                <!-- <text>请选择</text> -->
+                <address-picker areaIds="{{areaIds}}"></address-picker>
+      </view>
+
+      <view style='height:30px;'></view>
+      <!-- 二维码使用 -->
+      <canvas class='qrcode' canvas-id='canvas' bindlongtap='save' style="width: 230px; height: 230px;"></canvas>
+
+
+      <view style='height:20px;'></view>
+
+      <label bindtap='handleUserCheckSwiper'>滑动联动</label>
+
+
+</view>

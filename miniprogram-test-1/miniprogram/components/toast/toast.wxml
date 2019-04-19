@@ -1,0 +1,11 @@
+<template name="toast">
+    <view style="{{topValueInFixedPositon ? 'top: ' + topValueInFixedPositon : ''}}"
+          class="pin-toast-container {{showCenterInWindow ? 'center' : 'bottom'}}"
+          hidden="{{!visible}}">
+        <view class="pin-toast {{visible == null ? '' : (visible ? 'fade-in' : 'fade-out')}}">
+            <text>{{toastMessage}}</text>
+        </view>
+    </view>
+
+    
+</template>

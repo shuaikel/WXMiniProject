@@ -1,0 +1,6 @@
+<view class="num-box">
+  <view class="num-box-btn middle {{num <= min ? 'disabled' : ''}}" bindtap='reduce'>-</view>
+  <!-- <input type="number" class="num-input" value="{{num}}" bindchange="inputNum"></input> -->
+  <text class="num-input">{{num}}</text>
+  <view class="num-box-btn {{num >= max ? 'disabled' : ''}}" bindtap='add'>+</view>
+</view>

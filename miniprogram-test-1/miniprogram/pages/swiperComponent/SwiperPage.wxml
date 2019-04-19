@@ -1,0 +1,40 @@
+<!--miniprogram/pages/swiperComponent/SwiperPage.wxml-->
+
+<view>
+        <!-- 联动标签顶部 -->
+          <view class="scroll_box">
+              <scroll-view scroll-with-animation="{{true}}" scroll-into-view="{{ 'titleItem' + currentPageIndex}}" class="scroll-view_x" scroll-x style="width: auto;overflow:hidden; display:flex;">
+                  <view class="item_list" wx:for="{{vip_list}}" wx:key="{{index}}">
+                      <view id='{{"titleItem" + index}}' bindtap='changeSwiperPageAction' data-currentIndex='{{index}}' class='itemSelect_label,{{index == 4 ? "noBorderRightStyle" : "borderRightStyle"}}'>
+                          <label class='{{currentPageIndex == index ? "tabSelectColor" : "tabDefaultColor"}}'>{{item.level}}</label>
+                      </view>
+                  </view>
+              </scroll-view>
+          </view>
+
+
+        <!-- 联动标签底部 -->
+        <view class='bottomScroll_box'>
+
+            <swiper style="height:100%;" autoplay='{{false}}' current="{{currentPageIndex}}" bindchange="swiperChangeAction">
+
+                <block wx:for="{{vip_list}}" wx:key="{{index}}">
+                    <swiper-item>
+                        <template is="emptyComponet" data="{{...emptyConfig}}" wx:if="{{item.packages.length <= 0}}"></template>
+                        <view class="bottom_item_list" wx:if="{{item.packages.length > 0}}">
+                            <block wx:for="{{item.packages}}" wx:for-item="model" wx:key="{{model.title}}" wx:for-index="{{idx}}">
+                                <view bindtap='userCheckGiftDetail' data-model='{{model}}' class='itemSelect_view' style="background-image: url({{model.img}});">
+
+                                    <label class='markLabel' wx:if="{{model.label.length > 0 }}">{{model.label}}</label>
+                                    <label class='giftTitleLabel'>{{model.title}}</label>
+                                    <label class='giftSubTitlelabel'>{{model.sub_title}}</label>
+                                </view>
+                            </block>
+                        </view>
+                    </swiper-item>
+                </block>
+            </swiper>
+        </view>
+    </view>
+
+<!-- </view> -->
